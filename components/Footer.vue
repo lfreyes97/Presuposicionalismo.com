@@ -20,7 +20,7 @@
 
         <div class="mx-auto max-w-7xl px-14 py-10 sm:p-6 lg:pb-8">
           <div class="items-center justify-center gap-8 md:flex md:bg-base-200  px-14 rounded-2xl bg-transparent-70 backdrop-blur-lg">
-            <div class="m-2 p-2 bg-slate-50 flex grow items-center justify-center  md:justify-start">
+            <div class="m-2 p-2 flex grow items-center justify-center  md:justify-start">
               <a href="/" aria-label="logo" class="space-x-2 md:flex md:items-center">
                 <svg class="" viewBox="0 0 628 153" width="150" height="37" stroke-width="2" stroke="none"
                   fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
