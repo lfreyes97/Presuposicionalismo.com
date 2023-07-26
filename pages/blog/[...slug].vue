@@ -119,16 +119,16 @@ useHead({
       </header>
 
       <hr>
-      <div class="grid mt-4">
+
         <div
-          class="col-span-full md:col-span-6 md:col-start-1 md:row-start-1 prose-sm md:prose-base w-full pr-4 max-w-4xl m-auto text-justify indent-8">
+          class="prose-sm md:prose-base w-full pr-4 max-w-4xl m-auto text-justify indent-8">
           <ContentRenderer :value="article">
             <template #empty>
               <p>No content found.</p>
             </template>
           </ContentRenderer>
         </div>
-      </div>
+
 
 
     </article>
