@@ -1,61 +1,104 @@
 <template>
-  <div class="container mx-auto px-8 md:px-12 lg:px-6">
-    <div class="navbar sticky bg-opacity-90 backdrop-blur bg-base-100 w-full border-b">
-      <div class="container mx-auto px-8 md:px-12 lg:px-6">
-        <div class="navbar-start flex items-center">
-          <a href="/" aria-label="logo" class="flex items-center">
-            <svg class="" viewBox="0 0 628 153" width="150" height="37" stroke-width="2" stroke="none" fill="currentColor"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="m322 6.7l-6.6 66.6-6.6-66.6c-0.4-3.2 2.3-6.1 6-6.4 3.7-0.3 6.9 2.1 7.2 5.4 0.1 0.3 0.1 0.7 0 1z" />
-              <path d="m338.4 15.9l-3.8 45.4-3.8-45.4c-0.1-1.9 1.4-3.5 3.5-3.6 2.1-0.2 3.9 1.2 4.1 3.1q0 0.2 0 0.5z" />
-              <path d="m300 15.9l-3.8 45.4-3.8-45.4c-0.1-1.9 1.4-3.5 3.5-3.6 2.1-0.2 3.9 1.2 4.1 3.1q0 0.2 0 0.5z" />
-              <path d="m357.6 26.5l-3.8 24.4-3.8-24.4c-0.3-1.8 1.2-3.5 3.3-3.8 2.1-0.3 4 1 4.3 2.9q0 0.5 0 0.9z" />
-              <path d="m280.8 26.5l-3.8 24.4-3.8-24.4c-0.3-1.8 1.2-3.5 3.3-3.8 2.1-0.3 4 1 4.3 2.9q0.1 0.5 0 0.9z" />
-              <path
-                d="m376.2 32.2l-3.8 13.5-3.8-13.5c-0.5-1.9 0.8-3.7 2.9-4.2 2.1-0.5 4.2 0.7 4.7 2.5 0.2 0.6 0.2 1.2 0 1.7z" />
-              <path
-                d="m262.2 32.2l-3.8 13.5-3.8-13.5c-0.5-1.9 0.7-3.7 2.8-4.2 2.1-0.5 4.2 0.7 4.8 2.5 0.1 0.6 0.1 1.2 0 1.7z" />
-              <path
-                d="m4.1 152h7.2v-26.8h9.1c9.3 0 11.8-2.6 11.8-11.7v-18.3c0-9-2.5-11.7-11.8-11.7h-16.3zm7.2-32.8v-29.7h7.8c5.3 0 5.9 1.7 5.9 6.9v15.9c0 5.2-0.6 6.9-5.9 6.9zm56.9 9.1c0-6.7-1.5-9.8-6.2-11 4.7-1.2 6.2-4.3 6.2-11.1v-11c0-9-2.6-11.7-12-11.7h-16.9v68.5h7.2v-31.8h7.9c5.5 0 6.5 2.3 6.5 7.6v13.6c0 4.3 0 8.4 1 10.6h7.7c-1.1-3.4-1.4-7.6-1.4-12zm-7.3-21.1c0 5.2-0.5 7-5.8 7h-8.6v-24.8h8.6c5.4 0 5.8 1.7 5.8 7zm23.9-17.8h14.8v-6h-22.1v68.5h22.1v-6h-14.8v-27h12.6v-5.8h-12.6zm41.2 50c0 5.3-0.5 7-5.7 7h-2.1c-5.3 0-5.7-1.7-5.7-7v-12.3h-6.9v13.6c0 9 2.6 11.7 11.9 11.7h4c9.3 0 11.7-2.7 11.7-11.7v-7.1c0-8.5-1.7-11.3-11.1-18.9-7.9-6.5-9.2-8.5-9.2-14.9v-4.1c0-5.2 0.4-6.8 5.7-6.8h2.1c5.3 0 5.7 1.6 5.7 6.9v10.4h6.8v-11.7c0-9-2.4-11.6-11.7-11.6h-4c-9.3 0-11.9 2.6-11.9 11.6v5.4c0 8.5 1.8 11.2 11.1 18.9 8 6.5 9.3 8.4 9.3 14.9zm22.8-56.1h-7.2v57.3c0 9 2.4 11.7 11.9 11.7h4.7c9.4 0 11.9-2.7 11.9-11.7v-57.3h-6.9v56.1c0 5.3-0.4 6.9-5.8 6.9h-2.8c-5.3 0-5.8-1.6-5.8-6.9zm30.9 68.5h7.3v-26.8h9c9.3 0 11.9-2.7 11.9-11.8v-18.3c0-9-2.6-11.6-11.9-11.6h-16.3zm7.3-32.8v-29.7h7.8c5.3 0 5.8 1.6 5.8 6.9v15.9c0 5.1-0.5 6.9-5.8 6.9zm27.2 21.6c0 9 2.6 11.7 12 11.7h5.1c9.4 0 12-2.7 12-11.7v-46.2c0-9-2.6-11.6-12-11.6h-5.1c-9.4 0-12 2.6-12 11.6zm21.7-1.2c0 5.3-0.3 6.9-5.7 6.9h-2.9c-5.4 0-5.7-1.6-5.7-6.9v-43.7c0-5.2 0.3-6.9 5.7-6.9h2.9c5.4 0 5.7 1.7 5.7 6.9zm35.5 0c0 5.3-0.4 7-5.7 7h-2.1c-5.3 0-5.7-1.7-5.7-7v-12.3h-6.8v13.6c0 9 2.5 11.7 11.8 11.7h4c9.3 0 11.7-2.7 11.7-11.7v-7.1c0-8.5-1.7-11.3-11.1-18.9-7.9-6.5-9.2-8.5-9.2-14.9v-4.1c0-5.2 0.5-6.8 5.7-6.8h2.1c5.3 0 5.7 1.6 5.7 6.9v10.4h6.8v-11.7c0-9-2.4-11.6-11.7-11.6h-4c-9.3 0-11.8 2.6-11.8 11.6v5.4c0 8.5 1.7 11.2 11.1 18.9 7.9 6.5 9.2 8.4 9.2 14.9zm15.8 12.4h7.3v-68.5h-7.3zm23.9-56.1c0-5.2 0.3-6.9 5.7-6.9h2.8c5.4 0 5.8 1.7 5.8 6.9v12.2h6.9v-13.4c0-9-2.4-11.7-11.9-11.7h-4.7c-9.5 0-12 2.7-12 11.7v46.2c0 9 2.5 11.6 12 11.6h4.7c9.5 0 11.9-2.6 11.9-11.6v-16.4h-6.9v15.1c0 5.3-0.4 6.9-5.8 6.9h-2.8c-5.4 0-5.7-1.6-5.7-6.9zm30.3 56h7.3v-68.4h-7.3zm16.5-11.2c0 9 2.5 11.6 12 11.6h5c9.5 0 12-2.6 12-11.6v-46.2c0-9-2.5-11.6-12-11.6h-5c-9.5 0-12 2.6-12 11.6zm21.6-1.2c0 5.2-0.3 6.9-5.7 6.9h-2.8c-5.4 0-5.7-1.7-5.7-6.9v-43.7c0-5.3 0.3-6.9 5.7-6.9h2.8c5.4 0 5.7 1.6 5.7 6.9zm37.5 12.4h8.2v-68.4h-6.4v42c0 4.3 0.2 8.1 0.3 11.9-0.7-3.8-1.4-7.6-2.5-11.8l-11.1-42.1h-9.4v68.4h6.3v-44.9c0-4.3-0.1-8.1-0.2-11.8 0.6 3.7 1.4 7.5 2.5 11.6zm38.8 0h7.3l-10.7-68.4h-10l-10.8 68.4h6.5l1.8-11h14zm-12.7-31.5c2-12.4 3.2-23.2 3.8-31.1 0.8 7.9 2.1 18.6 4 31.1l2.2 14.5h-12.3zm26.8 31.5h20.4v-6h-13.1v-62.5h-7.3zm26.4 0h7.2v-68.5h-7.2zm36-12.4c0 5.3-0.4 6.9-5.7 6.9h-2.1c-5.3 0-5.7-1.6-5.7-6.9v-12.4h-6.8v13.6c0 9 2.5 11.7 11.9 11.7h3.9c9.4 0 11.8-2.7 11.8-11.7v-7.1c0-8.5-1.8-11.2-11.1-18.9-7.9-6.4-9.3-8.5-9.3-14.9v-4.1c0-5.1 0.5-6.8 5.8-6.8h2.1c5.2 0 5.7 1.7 5.7 6.9v10.4h6.8v-11.6c0-9-2.4-11.7-11.8-11.7h-3.9c-9.4 0-11.9 2.7-11.9 11.7v5.3c0 8.6 1.8 11.2 11.1 18.9 7.9 6.5 9.2 8.4 9.2 14.9zm46.6-33.6c0.6-3 1-7.4 1.6-11-0.1 3.5-0.3 7.9-0.3 11v46h7.2v-68.5h-10.9l-7.8 45.8c-0.4 2.9-0.8 6.3-1 9.6-0.3-3.3-0.6-6.7-1.1-9.6l-7.8-45.8h-10.8v68.5h6.3v-46c0-3.1-0.1-8.2-0.2-12 0.4 3.8 1.1 8.7 1.7 12l8.4 46h6.5zm17.6 34.9c0 9 2.5 11.6 12 11.6h5c9.5 0 12-2.6 12-11.6v-46.2c0-9-2.5-11.7-12-11.7h-5c-9.5 0-12 2.7-12 11.7zm21.6-1.3c0 5.3-0.3 6.9-5.7 6.9h-2.8c-5.4 0-5.8-1.6-5.8-6.9v-43.6c0-5.3 0.4-7 5.8-7h2.8c5.4 0 5.7 1.7 5.7 7z" />
-              <path stroke="currentColor" d="m3 64.4h225" />
-              <path stroke="currentColor" d="m625.7 64.4h-219.2" />
-            </svg>
-          </a>
+    <div class="container mx-auto bg-base-100">
+        <header class="absolute inset-x-0 top-0 z-50">
+            <nav class="flex items-center justify-between py-2 mx-auto lg:px-40 border-b opacity-75 backdrop-blur-sm" aria-label="Global">
+                <div class="flex lg:flex-1">
+                    <a href="/" aria-label="logo" class="flex items-center">
+                        <Logo />
+                    </a>
+                </div>
+                <div class="flex lg:hidden">
+                    <button type="button"
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
+                        @click="mobileMenuOpen = true">
+                        <span class="sr-only">Abrir menu</span>
+                        <Bars3Icon class="h-6 w-6" aria-hidden="true" />
+                    </button>
+                </div>
+                <div class="hidden lg:flex lg:gap-x-12">
+                    <ul class="menu menu-horizontal">
+                        <li>
+                            <NuxtLink to="/libros">Libros</NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink to="/blog">Blog</NuxtLink>
+                        </li>
+                        <Theme />
+
+                    </ul>
+                </div>
+            </nav>
+            <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
+                <div class="fixed inset-0 z-50" />
+                <DialogPanel
+                    class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-base-200 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <div class="flex items-center justify-between">
+                        <a href="/" aria-label="logo" class="flex items-center">
+                            <Logo />
+                        </a>
+                        <button type="button" class="-m-2.5 rounded-md p-2.5" @click="mobileMenuOpen = false">
+                            <span class="sr-only">Cerrar menu</span>
+                            <XMarkIcon class="h-6 w-6" aria-hidden="true" />
+                        </button>
+                    </div>
+                    <div class="mt-6 flow-root">
+                        <div class="-my-6 divide-y divide-gray-500/10">
+                            <div class="space-y-2 py-6">
+                                <ul class="menu menu-vertical">
+                                    <p>
+                                        Paginas
+                                    </p>
+                                    <li>
+                                        <NuxtLink to="/libros">Libros</NuxtLink>
+                                    </li>
+                                    <li>
+                                        <NuxtLink to="/blog">Blog</NuxtLink>
+                                    </li>
+                                    <p>
+                                        Tema
+                                    </p>
+                                    <ul class="menu menu-vertical">
+                                        <li><button class="py-1" data-set-theme="light" data-act-class="ACTIVECLASS">Modo
+                                                Claro</button></li>
+                                        <li><button class="py-1" data-set-theme="dark" data-act-class="ACTIVECLASS">Modo
+                                                Oscuro</button></li>
+                                        <li><button class="py-1" data-set-theme="retro" data-act-class="ACTIVECLASS">Modo
+                                                Sepia</button></li>
+                                    </ul>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </DialogPanel>
+            </Dialog>
+        </header>
+
+        <div class="relative isolate px-6 pt-14 lg:px-8">
+            <div class="fixed inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                aria-hidden="true">
+                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" />
+            </div>
+
+            <div class="fixed inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+                aria-hidden="true">
+                <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" />
+            </div>
         </div>
-
-        <div class="navbar-end flex items-center">
-          
-          
-
-          <div class="flex-none items-center invisible lg:visible">
-            <ul class="menu menu-horizontal">
-              <li>
-                <NuxtLink to="/libros">Libros</NuxtLink>
-              </li>
-              <li>
-                <NuxtLink to="/blog">Blog</NuxtLink>
-              </li>
-              <Theme />
-            </ul>
-          </div>
-
-          <div class="dropdown lg:hidden">
-            <label tabindex="0" class="btn btn-ghost btn-circle">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
-
-            </label>
-            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li>
-                <NuxtLink to="/libros">Libros</NuxtLink>
-              </li>
-              <li>
-                <NuxtLink to="/blog">Blog</NuxtLink>
-              </li>
-              <Theme />
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 </template>
+  
+<script setup>
+import { ref } from 'vue'
+import { Dialog, DialogPanel } from '@headlessui/vue'
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+
+const navigation = [
+    { name: 'Libros', to: '/libros' },
+    { name: 'Blog', to: '/blog' },
+]
+
+const mobileMenuOpen = ref(false)
+</script>
