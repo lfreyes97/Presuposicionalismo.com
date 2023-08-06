@@ -1,7 +1,7 @@
 <template>
     <div class="container mx-auto bg-base-100">
         <header class="absolute inset-x-0 top-0 z-50">
-            <nav class="flex items-center justify-between py-2 mx-auto lg:px-40 border-b opacity-75 backdrop-blur-sm" aria-label="Global">
+            <nav class="flex items-center justify-between py-2 mx-auto px-4 lg:px-40 border-b opacity-75 backdrop-blur-sm" aria-label="Global">
                 <div class="flex lg:flex-1">
                     <a href="/" aria-label="logo" class="flex items-center">
                         <Logo />
