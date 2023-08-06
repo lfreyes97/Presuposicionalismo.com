@@ -91,10 +91,19 @@
 </template>
   
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { Dialog, DialogPanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
+import { themeChange } from 'theme-change'
+
+export default {
+    setup() {
+        onMounted(() => {
+            themeChange(false)
+        })
+    },
+}
 const navigation = [
     { name: 'Libros', to: '/libros' },
     { name: 'Blog', to: '/blog' },
