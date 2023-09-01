@@ -33,8 +33,8 @@ const section: Sections = "blog";
 
 <template>
   <main>
-    <AppTitle class="pt-20">{{ title }}</AppTitle>
-    <AppIntro>{{ description }}</AppIntro>
+    <!-- <AppTitle class="pt-20">{{ title }}</AppTitle>
+    <AppIntro>{{ description }}</AppIntro> -->
     <Tags :section="section" />
 
     <div class="py-6 m-auto max-w-4xl" v-for="(item, key) of contentList">
