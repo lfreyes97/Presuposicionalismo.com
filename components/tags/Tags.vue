@@ -26,24 +26,22 @@ const { data } = await useAsyncData('tags', () => queryContent(props.section)
   .only(["tags"])
   .where({ published: { $ne: false } })
   .find());
-  
+
 const articleTags = [...new Set(flatten(data.value, 'tags'))];
 const sortedArticleTags = articleTags.sort()
 </script>
 
 <template>
-  <ul
-    aria-label="topics" class="max-w-4xl flex justify-left md:justify-center items-center gap-2 my-4 mx-0 md:mx-auto border border-transparent rounded-lg overflow-x-scroll md:overflow-visible flex-nowrap md:flex-wrap font-normal md:text-sm sm:text-xl"
-  >
-    <li
-      v-for="(tag, i) in sortedArticleTags"
-      :key="tag+i" class="flex gap-2 justify-center flex-nowrap "
-    >
-      <NuxtLink
-
-        :to="`/${section}/tags/${tag}`"
-        class="badge badge-xl p-2"
-      >
+  <h2 class="flex flex-row flex-nowrap items-center mt-24">
+    <span class="flex-grow block border-t border-black"></span>
+    <span class="flex-none block mx-4 px-4 py-2.5 text-md rounded-md leading-none font-medium bg-base-300">
+      Tags Populares
+    </span>
+    <span class="flex-grow block border-t border-black"></span>
+  </h2>
+  <ul aria-label="topics" class="flex justify-center flex-wrap gap-2 p-4 max-w-sm mx-auto my-4">
+    <li v-for="(tag, i) in sortedArticleTags" :key="tag + i" class="flex gap-2 justify-center flex-wrap ">
+      <NuxtLink :to="`/${section}/tags/${tag}`" class="btn btn-sm hover:badge-accent p-2">
         {{ replaceHyphen(tag) }}
       </NuxtLink>
     </li>
